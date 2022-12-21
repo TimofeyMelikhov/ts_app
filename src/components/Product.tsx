@@ -18,7 +18,7 @@ export function Product({product}: ProductProps) {
       className="border py-2 px-4 rounded flex flex-col items-center mb-2"
     > 
       <img src={product.image} alt={product.title} className="w-1/6" />
-      <p>{ product.title } </p>
+      <p> { product.title } </p>
       <span className="font-bold">{ product.price }</span>
 
       <button 
@@ -30,7 +30,7 @@ export function Product({product}: ProductProps) {
 
       { details && <div>
         <p> {product.description} </p>
-        <p> Rate: <span style={{ fontWeight: 'bold' }}> {product.rating.rate} </span> </p>
+        <p> Rate: <span style={{ fontWeight: 'bold' }}> {product?.rating?.rate} </span> </p>
         </div> 
       }
 
